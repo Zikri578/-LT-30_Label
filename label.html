@@ -28,6 +28,10 @@
         </div>
 
         <br>
+        
+        <div>
+            <button onclick="Result()">Kamu beruntung! Silahkan pilih hadiahmu dengan memasukan angka 1 sampai 5</button>
+        </div>
     </div>
     <script>
         // melakukan pengulangan
@@ -51,6 +55,40 @@
                             document.writeln(`<p>${index} - ${js}</p>`);
                         }
                 }
+        }
+        
+                // membuat function yang benama Hasil
+        function Result() {
+            // membuat variabel hasil untuk melakukan input data menggunakan prompt
+            let jawab = prompt("Kamu beruntung! Silahkan pilih hadiahmu dengan memasukan angka 1 sampai 5");
+            let hadiah = "";
+
+            loopt:
+                switch (jawab) {
+                    case "1":
+                        hadiah = "Tisu";
+                        break loopt;
+                    case "2":
+                        hadiah = "1 Kotak Kopi";
+                        break loopt;
+                    case "3":
+                        hadiah = "Sticker";
+                        break loopt;
+                    case "4":
+                        hadiah = "Minyak Goreng";
+                        break loopt;
+                    case "5":
+                        hadiah = "Uang Rp 50.000";
+                        break loopt;
+                    default:
+                        alert("Opps! anda salah pilih");
+                }
+
+            if (hadiah === "") {
+                alert("Kamu gagal mendapat hadiah");
+            } else {
+                alert("Selamat kamu mendapatkan " + hadiah);
+            }
         }
     </script>
 </body>
