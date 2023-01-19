@@ -59,36 +59,25 @@
         
                 // membuat function yang benama Hasil
         function Result() {
-            // membuat variabel hasil untuk melakukan input data menggunakan prompt
-            let jawab = prompt("Kamu beruntung! Silahkan pilih hadiahmu dengan memasukan angka 1 sampai 5");
-            let hadiah = "";
+            // membuat variabel nilai untuk melakukan input data menggunakan prompt
+            let nilai = prompt("Input Nilai Anda:");
+            let grade = "";
 
             loopt:
-                switch (jawab) {
-                    case "1":
-                        hadiah = "Tisu";
-                        break loopt;
-                    case "2":
-                        hadiah = "1 Kotak Kopi";
-                        break loopt;
-                    case "3":
-                        hadiah = "Sticker";
-                        break loopt;
-                    case "4":
-                        hadiah = "Minyak Goreng";
-                        break loopt;
-                    case "5":
-                        hadiah = "Uang Rp 50.000";
-                        break loopt;
+                switch (true) {
+                    case nilai >= 80 && nilai <= 100:
+                        grade = "Istimewa";
+                        break;
+                    case nilai >= 60 && nilai < 80:
+                        grade = "Sangat Bagus";
+                        break;
+                    case nilai >= 40 && nilai < 60:
+                        grade = "Bagus";
+                        break;
                     default:
-                        alert("Opps! anda salah pilih");
+                        grade = "Cukup";
                 }
-
-            if (hadiah === "") {
-                alert("Kamu gagal mendapat hadiah");
-            } else {
-                alert("Selamat kamu mendapatkan " + hadiah);
-            }
+            alert("Nilai Anda adalah " + grade);
         }
     </script>
 </body>
