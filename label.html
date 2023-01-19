@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label - Javascript</title>
+    <script src="label.js"></script>
+</head>
+
+<body>
+    <div>
+        <div>
+            <button src="label.js" onclick="ganjil()">Masukkan Bilangan</button>
+        </div>
+
+        <br>
+
+        <div>
+            <button src="label.js" onclick="genap()">Masukkan Angka</button>
+        </div>
+
+        <br>
+
+        <div>
+            <button onclick="Hasil()">Input Bilangan</button>
+        </div>
+
+        <br>
+    </div>
+    <script>
+        // melakukan pengulangan
+
+        // membuat function yang benama Hasil
+        function Hasil() {
+            // membuat variabel hasil untuk melakukan input data menggunakan prompt
+            let hasil = prompt('Input Bilangan : ');
+
+            // membuat label bernama loopi
+            loopi:
+                // melakukan perulangan dimana dibuat variabel index dengan valuenya 0, serta melakukan pengkondisian apakah index lebih kecil dari hasil? lalu index tersebut ditambah 1,
+                // apabila pengkondisian tersebut bernilai benar maka akan dilanjutkan sampai batasan input yang ada diatas, apabila bernilai salah maka akan berhenti
+                for (let index = 0; index <= hasil; index++) {
+                    // membuat label yang benama loopj 
+                    loopj:
+                        // melakukan perulangan dimana dibuat variabel js dengan value nya dimulai dari 10, serta melakukan pengkondisian apakah js lebih besar dari 0? lalu index tersebut dikurangi 1
+                        // apabila pengkondisian tersebut bernilai benar maka akan dilanjutkan sampai dengan 1,
+                        for (let js = 10; js > 0; js--) {
+                            // menampilkan output index dan js 
+                            document.writeln(`<p>${index} - ${js}</p>`);
+                        }
+                }
+        }
+    </script>
+</body>
+
+</html>
